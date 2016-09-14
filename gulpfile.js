@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var del = require('del');
+var distFolder = '../dist';
 
 // LESS Compiler
 gulp.task('less-common', function(done) {
@@ -27,12 +29,36 @@ gulp.task('less', gulp.series('less-common', 'less-ios', 'less-material', functi
   done();
 }));
 
+gulp.task('clean', function() {
+  return del([distFolder + '/*', '!' + distFolder + '/CNAME'], {
+    force: true
+  });
+});
 
 gulp.task('dist', function() {
-  return gulp.src(['index.html', 'blank.html', 'node_modules/sigma-ui-frameseven/**/*',
-      './fonts/**/*', './styles/**/*', './images/**/*', './scripts/**/*'
+  return gulp.src(['index.html', 'blank.html', 'default.html',
+      'node_modules/sigma-ui-frameseven/**/*.js',
+      'node_modules/sigma-ui-frameseven/**/*.html',
+      './fonts/**/*', './css/**/*', './images/**/*', './scripts/**/*'
+    ], {
+      base: './'
+    })
+    .pipe(gulp.dest(distFolder));
+});
+
+gulp.task('www', function() {
+  return gulp.src(['index.html', 'blank.html',
+      'node_modules/sigma-ui-frameseven/**/*.js',
+      'node_modules/sigma-ui-frameseven/**/*.html',
+      './fonts/**/*', './css/**/*', './images/**/*', './scripts/**/*'
     ], {
       base: './'
     })
     .pipe(gulp.dest('./www'));
 });
+
+
+gulp.task('production', gulp.series('clean', 'less', 'dist', 'www',
+  function(done) {
+    done();
+  }));

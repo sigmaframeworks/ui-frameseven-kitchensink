@@ -5,4 +5,11 @@
 typings/
 /styles
 .sass-cache/
-dist/
+
+# Cordova and aurelia build folders
+www/
+css/app*.css
+builds/*.apk
+hooks/
+plugins/
+platforms/
