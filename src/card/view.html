@@ -1,0 +1,80 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
+<template>
+  <fs-page data-page="card">
+    <fs-navbar nav-title="Cards">
+      <span slot="left">
+        <fs-tool back></fs-tool>
+      </span>
+      <span slot="right">
+        <fs-tool menu></fs-tool>
+      </span>
+    </fs-navbar>
+
+    <fs-page-content>
+      <fs-content-title>Simple Card</fs-content-title>
+      <fs-card>
+        <fs-card-content>
+          Lorem ipsum....
+        </fs-card-content>
+      </fs-card>
+
+      <fs-content-title>Card with Header/Footer</fs-content-title>
+      <fs-card>
+        <fs-card-header class="bg-alternate">Card Title</fs-card-header>
+        <fs-card-content>
+          Lorem ipsum....
+        </fs-card-content>
+        <fs-card-footer>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+        </fs-card-footer>
+      </fs-card>
+
+      <fs-content-title>Card with List Content</fs-content-title>
+      <fs-card>
+        <fs-card-header>Card Title</fs-card-header>
+        <fs-list>
+          <fs-list-group label="Item with After">
+            <fs-list-item>
+              <fs-item-title>Question?</fs-item-title>
+              <fs-item-after>Age</fs-item-after>
+            </fs-list-item>
+            <fs-list-item>
+              <fs-item-title>Answer?</fs-item-title>
+              <fs-item-after>42</fs-item-after>
+            </fs-list-item>
+          </fs-list-group>
+          <fs-list-group label="Item with Media">
+            <fs-list-item>
+              <fs-item-media>
+                <span class="icon fi-vaadin-add-square"></span>
+              </fs-item-media>
+              <fs-item-title>Language?</fs-item-title>
+              <fs-item-after>English</fs-item-after>
+            </fs-list-item>
+            <fs-list-item>
+              <fs-item-media>
+                <span class="icon fi-vaadin-add-square"></span>
+              </fs-item-media>
+              <fs-item-title>Country?</fs-item-title>
+              <fs-item-after>US</fs-item-after>
+            </fs-list-item>
+          </fs-list-group>
+          <fs-list-group label="Item with Links">
+            <fs-list-link>
+              <fs-item-title>Change Language</fs-item-title>
+            </fs-list-link>
+            <fs-list-link>
+              <fs-item-title>Change Country?</fs-item-title>
+            </fs-list-link>
+          </fs-list-group>
+        </fs-list>
+      </fs-card>
+    </fs-page-content>
+
+  </fs-page>
+</template>

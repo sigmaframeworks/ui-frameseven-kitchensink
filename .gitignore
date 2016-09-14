@@ -1,0 +1,8 @@
+/node_modules
+.idea
+.DS_STORE
+/scripts
+typings/
+/styles
+.sass-cache/
+dist/

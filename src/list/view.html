@@ -1,0 +1,62 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
+<template>
+  <fs-page data-page="list">
+    <fs-navbar nav-title="Lists">
+      <span slot="left">
+        <fs-tool back></fs-tool>
+      </span>
+      <span slot="right">
+        <fs-tool menu></fs-tool>
+      </span>
+    </fs-navbar>
+
+    <fs-page-content>
+      <fs-content-title>Simple List</fs-content-title>
+      <fs-list>
+        <fs-list-label>List block label</fs-list-label>
+        <fs-list-block>
+          <fs-list-item>
+            <fs-item-title>Question?</fs-item-title>
+            <fs-item-after>Age</fs-item-after>
+          </fs-list-item>
+          <fs-list-item>
+            <fs-item-title>Answer?</fs-item-title>
+            <fs-item-after>42</fs-item-after>
+          </fs-list-item>
+          <fs-list-divider></fs-list-divider>
+          <fs-list-item>
+            <fs-item-media>
+              <span class="icon fi-vaadin-add-square"></span>
+            </fs-item-media>
+            <fs-item-title>Language?</fs-item-title>
+            <fs-item-after>English</fs-item-after>
+          </fs-list-item>
+          <fs-list-item>
+            <fs-item-media>
+              <span class="icon fi-vaadin-add-square"></span>
+            </fs-item-media>
+            <fs-item-title>Country?</fs-item-title>
+            <fs-item-after>US</fs-item-after>
+          </fs-list-item>
+        </fs-list-block>
+      </fs-list>
+
+      <fs-content-title>Grouped List</fs-content-title>
+      <fs-list>
+        <fs-list-group repeat.for="key of countries | keys" label="${key}">
+          <fs-list-item repeat.for="ct of countries[key]">
+            <fs-item-media>
+              <span class="icon ui-flag ${ct.iso3}"></span>
+            </fs-item-media>
+            <fs-item-title>${ct.name}</fs-item-title>
+            <fs-item-after>${ct.tld}</fs-item-after>
+          </fs-list-item>
+        </fs-list-group>
+      </fs-list>
+    </fs-page-content>
+  </fs-page>
+</template>

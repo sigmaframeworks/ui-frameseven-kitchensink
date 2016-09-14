@@ -1,0 +1,81 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
+<template>
+  <fs-page data-page="inputs">
+    <fs-navbar nav-title="Inputs">
+      <span slot="left">
+        <fs-tool back></fs-tool>
+      </span>
+      <span slot="right">
+        <fs-tool menu></fs-tool>
+      </span>
+    </fs-navbar>
+    
+    <fs-toolbar>
+      <fs-column></fs-column>
+      <a class="button button-fill button-raised" click.trigger="validate()">Validate</a>
+    </fs-toolbar>
+
+    <fs-page-content>
+      <fs-content-title>Inputs</fs-content-title>
+      <fs-list validation-renderer="fs-validator">
+        <fs-list-label>Simple inputs</fs-list-label>
+        <fs-list-block>
+          <fs-input>
+            <fs-item-media>
+              <span class="icon fi-vaadin-pencil"></span>
+            </fs-item-media>
+            <fs-input-label>Name</fs-input-label>
+            <input type="text" placeholder="Name" value.bind="model.name & validate" />
+          </fs-input>
+          <fs-input>
+            <fs-item-media>
+              <span class="icon fi-vaadin-at"></span>
+            </fs-item-media>
+            <fs-input-label>Email</fs-input-label>
+            <input type="email" placeholder="Email" value.bind="model.email & validate" />
+          </fs-input>
+          <fs-input>
+            <fs-item-media>
+              <span class="icon fi-vaadin-anchor"></span>
+            </fs-item-media>
+            <fs-input-label>URL</fs-input-label>
+            <input type="url" placeholder="URL" value.bind="model.url & validate" />
+          </fs-input>
+          <fs-phone value.bind="model.phone & validate">
+            <fs-item-media>
+              <span class="icon fi-vaadin-phone"></span>
+            </fs-item-media>
+            <fs-input-label>Phone</fs-input-label>
+          </fs-phone>
+          <fs-input type="list" placeholder="Select">
+            <fs-item-media>
+              <span class="icon fi-vaadin-paint-brush"></span>
+            </fs-item-media>
+            <fs-input-label>Color</fs-input-label>
+            <select value.bind="model.color & validate">
+              <option value="">--Select One--</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="yellow">Yellow</option>
+              <option value="orange">Orange</option>
+              <option value="purple">Purple</option>
+            </select>
+          </fs-input>
+          <fs-input>
+            <fs-item-media>
+              <span class="icon fi-vaadin-check-square-1"></span>
+            </fs-item-media>
+            <fs-input-label>Check</fs-input-label>
+            <fs-switch></fs-switch>
+          </fs-input>
+        </fs-list-block>
+      </fs-list>
+
+    </fs-page-content>
+  </fs-page>
+</template>

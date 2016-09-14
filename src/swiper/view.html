@@ -1,0 +1,40 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
+<template>
+  <fs-page data-page="swiper">
+    <fs-navbar nav-title="Swiper">
+      <span slot="left">
+        <fs-tool back></fs-tool>
+      </span>
+      <span slot="right">
+        <fs-tool menu></fs-tool>
+      </span>
+    </fs-navbar>
+
+    <fs-page-content>
+      <fs-content-title>Simple Swiper</fs-content-title>
+      <fs-swiper pagination click.trigger="myPhotoBrowser.open()">
+        <fs-slide repeat.for="slide of slides" css.bind="{height:'270px'}" data-background.bind="slide.url" class="lazy swiper-slide-placeholder"></fs-slide>
+      </fs-swiper>
+      <fs-content-title>Simple Cards</fs-content-title>
+      <fs-swiper pagination>
+        <fs-slide repeat.for="slide of slides">
+          <fs-card>
+            <!-- <fs-card-content> -->
+            <div class="row">
+              <div class="col-fill lazy swiper-slide-placeholder" style="margin-right: 5px;align-self:stretch;max-width:80px;" data-background.bind="slide.url" style=""></div>
+              <div class="col-fill" style="min-height: 120px">
+                <h5 style="margin: 5px 0">${slide.caption}</h5>
+                <p style="margin: 0">${slide.detail}</p>
+              </div>
+            </div>
+            <!-- </fs-card-content> -->
+          </fs-card>
+        </fs-slide>
+      </fs-swiper>
+    </fs-page-content>
+  </fs-page>
+</template>
