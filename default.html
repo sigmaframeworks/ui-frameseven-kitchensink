@@ -57,7 +57,6 @@
         appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="ios"]').disabled = true;
         appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="android"]').disabled = true;
         appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="' + dev + '"]').disabled = false;
-        if(!appFrame.contentWindow.Framework7) return;
         appFrame.contentWindow.Framework7.prototype.device.android = dev == 'android';
         appFrame.contentWindow.framework7.params.material = dev == 'android';
         appFrame.contentWindow.framework7.init();
@@ -68,9 +67,11 @@
         document.getElementById("ios").checked = ios;
         document.getElementById("android").checked = !ios;
         setTimeout(function () {
-          changeDevice(ios
+          try{
+            changeDevice(ios
             ? 'ios'
             : 'android');
+          }catch(e){}
           document.getElementById('splash').remove();
         }, 1000);
       }
