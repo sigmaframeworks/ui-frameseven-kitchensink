@@ -46,7 +46,7 @@
     <div style="position:absolute;top:0;bottom:0;left:0;right:0;background:white;z-index:1000000;" id="splash"></div>
 
     <script>
-    var appFrame = document.getElementById('appFrame');
+      var appFrame = document.getElementById('appFrame');
       function changeDevice(dev) {
         document['firstElementChild'].classList.remove('ios');
         document['firstElementChild'].classList.remove('android');
@@ -57,17 +57,22 @@
         appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="ios"]').disabled = true;
         appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="android"]').disabled = true;
         appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="' + dev + '"]').disabled = false;
-        appFrame.contentWindow.Framework7.prototype.device.android = dev=='android';
-        appFrame.contentWindow.framework7.params.material = dev=='android';
+        appFrame.contentWindow.Framework7.prototype.device.android = dev == 'android';
+        appFrame.contentWindow.framework7.params.material = dev == 'android';
         appFrame.contentWindow.framework7.init();
+        setTimeout(function () {appFrame.contentWindow.framework7.initPage(appFrame.contentWindow.mainView.activePage.container)}, 1000);
       }
-      var ios = navigator.vendor.toLowerCase().indexOf('google') == -1;
-      document.getElementById("ios").checked = ios;
-      document.getElementById("android").checked = !ios;
-      setTimeout(function(){
-        changeDevice(ios?'ios':'android');
-        document.getElementById('splash').remove();
-      },2000);
+      appFrame.onload = function () {
+        var ios = navigator.vendor.toLowerCase().indexOf('google') == -1;
+        document.getElementById("ios").checked = ios;
+        document.getElementById("android").checked = !ios;
+        setTimeout(function () {
+          changeDevice(ios
+            ? 'ios'
+            : 'android');
+          document.getElementById('splash').remove();
+        }, 1000);
+      }
     </script>
   </body>
 
