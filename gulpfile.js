@@ -37,9 +37,9 @@ gulp.task('clean', function() {
 
 gulp.task('dist', function() {
   return gulp.src(['index.html', 'blank.html', 'default.html',
-      'node_modules/sigma-ui-frameseven/**/*.js',
-      'node_modules/sigma-ui-frameseven/**/*.html',
-      './fonts/**/*', './css/**/*', './images/**/*', './scripts/**/*'
+      'node_modules/sigma-ui-frameseven/dist/**/*.js',
+      'node_modules/sigma-ui-frameseven/dist/**/*.html',
+      './fonts/**/*', './css/**/*', './favicons/**/*', './images/**/*', './scripts/**/*'
     ], {
       base: './'
     })
@@ -48,8 +48,8 @@ gulp.task('dist', function() {
 
 gulp.task('www', function() {
   return gulp.src(['index.html', 'blank.html',
-      'node_modules/sigma-ui-frameseven/**/*.js',
-      'node_modules/sigma-ui-frameseven/**/*.html',
+      'node_modules/sigma-ui-frameseven/dist/*.js',
+      'node_modules/sigma-ui-frameseven/dist/*.html',
       './fonts/**/*', './css/**/*', './images/**/*', './scripts/**/*'
     ], {
       base: './'

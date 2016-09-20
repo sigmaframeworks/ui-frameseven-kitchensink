@@ -52,6 +52,14 @@
             <fs-input-label>Phone</fs-input-label>
             <input type="tel" placeholder="Phone" phone value.bind="model.phone & validate" />
           </fs-input>
+          <fs-input>
+            <fs-item-media>
+              <span class="icon fi-vaadin-check-square-1"></span>
+            </fs-item-media>
+            <fs-input-label>Check</fs-input-label>
+            <fs-switch checked="true"></fs-switch>
+          </fs-input>
+          <fs-list-label>Picker inputs</fs-list-label>
           <fs-input type="list" placeholder="Select">
             <fs-item-media>
               <span class="icon fi-vaadin-paint-brush"></span>
@@ -69,10 +77,10 @@
           </fs-input>
           <fs-input>
             <fs-item-media>
-              <span class="icon fi-vaadin-check-square-1"></span>
+              <span class="icon fi-vaadin-calendar-and-clock"></span>
             </fs-item-media>
-            <fs-input-label>Check</fs-input-label>
-            <fs-switch></fs-switch>
+            <fs-input-label>Date Time</fs-input-label>
+            <input type="date" placeholder="Any date..."/>
           </fs-input>
         </fs-list-block>
       </fs-list>

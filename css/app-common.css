@@ -1,7 +1,12 @@
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,800italic,400,300,600,800');
 body {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  font-family: 'Open Sans', sans-serif;
+}
+hr {
+  transform: scaleY(0.5);
 }
 .row {
   display: flex;
@@ -12,6 +17,24 @@ body {
 }
 .row .col-auto {
   flex: 0 0 auto;
+}
+.row .col-info {
+  align-self: stretch;
+  flex: 0 0 320px;
+  padding: .5em;
+  margin: 0 .5em;
+}
+.row .col-info h1,
+.row .col-info p {
+  font-weight: 300;
+}
+.row .col-info h4 {
+  font-weight: 400;
+}
+@media screen and (max-width: 800px) {
+  .col-info {
+    display: none;
+  }
 }
 .device-option {
   width: 3em;
@@ -109,4 +132,20 @@ body {
   top: 0;
   margin-left: -45px;
   background: #333;
+}
+@media screen and (max-height: 800px) {
+  .demo-device .app-frame {
+    height: 448px;
+  }
+  .ios .demo-device {
+    padding: 80px 30px;
+  }
+  .ios .demo-device:after {
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+  }
+  .android .demo-device {
+    padding: 60px 30px 90px;
+  }
 }
