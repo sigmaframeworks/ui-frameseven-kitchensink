@@ -6,20 +6,38 @@
 <template>
   <fs-page data-page="home">
     <fs-navbar nav-title="Home">
-      <span slot="right">
+      <slot slot="right">
         <fs-tool menu></fs-tool>
-      </span>
+      </slot>
     </fs-navbar>
 
     <fs-page-content>
       <fs-content-title>Why Framework7?</fs-content-title>
       <fs-content-block class="text-justify">
         <p>Until aurelia-interface is released and get to try it, framework7 is the best alternative after having tried Xamarin and Ionic</p>
-        <p>Although Xamarin was very nice platform to develop multi-device apps quickly, with some nice options of have shared classes and views. It wasnt very responsive when it came to android devices when having a long list view with complex list items.</p>
+        <!-- <p>Although Xamarin was very nice platform to develop multi-device apps quickly, with some nice options of have shared classes and views. It wasnt very responsive when it came to android devices when having a long list view with complex list items.</p> -->
       </fs-content-block>
-      <fs-content>
-        <a class="button button-fill button-raised button-block" click.trigger="popup()">Popup</a>
-      </fs-content>
+      
+      <fs-list>
+        <fs-list-block>
+          <fs-list-link click.trigger="loadPage('card/view.html')" class="${app.activeView.startsWith('card')?'active':''}">
+            <fs-item-title>Cards</fs-item-title>
+          </fs-list-link>
+          <fs-list-link click.trigger="loadPage('list/view.html')" class="${app.activeView.startsWith('list')?'active':''}">
+            <fs-item-title>Lists</fs-item-title>
+          </fs-list-link>
+          <fs-list-link click.trigger="loadPage('inputs/view.html')" class="${app.activeView.startsWith('inputs')?'active':''}">
+            <fs-item-title>Inputs</fs-item-title>
+          </fs-list-link>
+          <fs-list-link click.trigger="loadPage('swiper/view.html')" class="${app.activeView.startsWith('swiper')?'active':''}">
+            <fs-item-title>Swiper</fs-item-title>
+          </fs-list-link>
+          <fs-list-divider></fs-list-divider>
+          <fs-list-link click.trigger="loadPage('home/settings.html')" class="${app.activeView=='settings'?'active':''}">
+            <fs-item-title>Color Themes</fs-item-title>
+          </fs-list-link>
+        </fs-list-group>
+      </fs-list>
     </fs-page-content>
   </fs-page>
 </template>

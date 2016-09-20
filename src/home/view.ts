@@ -4,7 +4,8 @@ import {FSApplication} from "sigma-ui-frameseven";
 @autoinject()
 export class Home {
   constructor(public app: FSApplication) { }
-  popup() {
-    this.app.showPopup('./home/popup.html');
+
+  loadPage(url) {
+    setTimeout(() => this.app.loadPage(url), 200);
   }
 }

@@ -1,0 +1,43 @@
+<template>
+  <fs-page detached.trigger="detached()" data-page="settings">
+    <fs-navbar nav-title="Colors">
+      <span slot="left">
+        <fs-tool back></fs-tool>
+      </span>
+      <slot slot="right">
+        <fs-tool menu></fs-tool>
+      </slot>
+    </fs-navbar>
+    <style>
+      .color-block {
+        display:block;
+        flex: 0 0 30%;
+        height: 40px;
+        margin: 5px 0;
+        border: 1px solid rgba(128, 128, 128, .5);
+        text-align: center;
+        font-size: 12px;
+        color: #fff !important;
+      }
+    </style>
+
+    <fs-page-content>
+      <fs-content-title>Layout Theme</fs-content-title>
+      <fs-content>
+        <fs-row>
+          <a href="#" click.trigger="changeLayout('light')" class="color-block" style="background: #f0f0f0">&nbsp;</a>
+          <a href="#" click.trigger="changeLayout('dark')" class="bg-black color-block">&nbsp;</a>
+          <a href="#" click.trigger="changeLayout('white')" class="bg-white color-block">&nbsp;</a>
+        </fs-row>
+      </fs-content>
+
+      <fs-content-title>Color Theme</fs-content-title>
+      <fs-content>
+        <fs-row>
+          <a href="#" click.trigger="changeTheme(c)" repeat.for="c of colors | keys" class="bg-${c} color-block">${colors[c]}</a>
+        </fs-row>
+      </fs-content>
+
+    </fs-page-content>
+  </fs-page>
+</template>

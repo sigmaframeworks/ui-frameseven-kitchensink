@@ -8,14 +8,19 @@ export class App {
   mainView;
 
   constructor(public app: FSApplication) {
+    Constants.layout = "layout-light";
+    Constants.theme = "theme-default";
   }
 
   ready() {
-    this.mainView = window.mainView;
+    // this.mainView = window.mainView;
     this.app.showMainView('home/view.html');
+    this.app.removeSplash();
   }
 
   loadPage(url) {
-    this.app.showMainView(url);
+    this.app.mainViewBack('home/view.html', false);
+    setTimeout(() => this.app.loadPage(url), 200);
   }
+
 }

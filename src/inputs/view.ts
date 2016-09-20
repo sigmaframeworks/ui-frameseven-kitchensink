@@ -16,8 +16,7 @@ export class InputsView {
   }
 
   validate() {
-    this.controller.validate()
-      .then(e => console.log(e));
+    this.controller.validate();
   }
 }
 

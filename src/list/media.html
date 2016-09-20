@@ -1,0 +1,73 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
+<template>
+  <fs-page data-page="list-media">
+    <fs-navbar nav-title="Media Lists">
+      <span slot="left">
+        <fs-tool back></fs-tool>
+      </span>
+      <span slot="right">
+        <fs-tool menu></fs-tool>
+      </span>
+    </fs-navbar>
+
+    <fs-page-content>
+      <fs-content-title>Media List</fs-content-title>
+      <fs-list media-list>
+        <fs-list-block>
+          <fs-list-item repeat.for="idx of 3">
+            <fs-item-media><img src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy"/></fs-item-media>
+            <fs-item-row>
+              <fs-item-title>Item</fs-item-title>
+              <fs-item-after>
+                <span class="badge">${idx}</span>
+              </fs-item-after>
+            </fs-item-row>
+            <fs-item-subtitle><small class="color-gray">Posted on ${'2016-09-18T' | date}</small></fs-item-subtitle>
+            <fs-item-text>${lipsum}</fs-item-text>
+          </fs-list-item>
+        </fs-list-block>
+      </fs-list>
+
+      <fs-content-title>Media List with Links</fs-content-title>
+      <fs-list media-list>
+        <fs-list-block>
+          <fs-list-link repeat.for="idx of 3">
+            <fs-item-media><img src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy rounded"/></fs-item-media>
+            <fs-item-row>
+              <fs-item-title>Item</fs-item-title>
+              <fs-item-after>
+                <span class="badge">${idx}</span>
+              </fs-item-after>
+            </fs-item-row>
+            <fs-item-subtitle><small class="color-gray">Posted on ${'2016-09-18T' | date}</small></fs-item-subtitle>
+            <fs-item-text>${lipsum}</fs-item-text>
+          </fs-list-link>
+        </fs-list-block>
+      </fs-list>
+
+      <fs-content-title>Media List with Cards</fs-content-title>
+      <fs-list cards-list>
+        <fs-list-block>
+          <fs-list-card repeat.for="idx of 3">
+            <fs-card-header valign="bottom" class="color-white lazy" data-background="http://lorempixel.com/300/80/food/${idx}" style="background:no-repeat center center;background-size:cover;height:80px;">
+              <div style="background:rgba(0,0,0,.5);padding: .25em .5em" class="pad-h">Item Title</div>
+            </fs-card-header>
+            <fs-card-content>
+              <small class="color-gray">Posted on ${'2016-09-18T' | date}</small>
+              <p>${lipsum}</p>
+            </fs-card-content>
+            <fs-card-footer>
+              <fs-column></fs-column>
+              <fs-link>Read More</fs-link>
+            </fs-card-footer>
+          </fs-list-card>
+        </fs-list-block>
+      </fs-list>
+
+    </fs-page-content>
+  </fs-page>
+</template>

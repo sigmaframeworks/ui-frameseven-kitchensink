@@ -1,0 +1,50 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
+<template>
+  <fs-page data-page="list-simple">
+    <fs-navbar nav-title="Simple Lists">
+      <span slot="left">
+        <fs-tool back></fs-tool>
+      </span>
+      <span slot="right">
+        <fs-tool menu></fs-tool>
+      </span>
+    </fs-navbar>
+
+    <fs-page-content>
+      <fs-content-title>Simple List</fs-content-title>
+      <fs-list>
+        <fs-list-label>List block label</fs-list-label>
+        <fs-list-block>
+          <fs-list-item>
+            <fs-item-title>Question?</fs-item-title>
+            <fs-item-after>Age</fs-item-after>
+          </fs-list-item>
+          <fs-list-item>
+            <fs-item-title>Answer?</fs-item-title>
+            <fs-item-after><span class="badge">42</span></fs-item-after>
+          </fs-list-item>
+          <fs-list-divider></fs-list-divider>
+          <fs-list-item>
+            <fs-item-media>
+              <span class="icon color-theme fi-vaadin-add-square"></span>
+            </fs-item-media>
+            <fs-item-title>Language?</fs-item-title>
+            <fs-item-after>English</fs-item-after>
+          </fs-list-item>
+          <fs-list-item>
+            <fs-item-media>
+              <span class="icon color-theme fi-vaadin-add-square"></span>
+            </fs-item-media>
+            <fs-item-title>Country?</fs-item-title>
+            <fs-item-after>US</fs-item-after>
+          </fs-list-item>
+        </fs-list-block>
+      </fs-list>
+      
+    </fs-page-content>
+  </fs-page>
+</template>

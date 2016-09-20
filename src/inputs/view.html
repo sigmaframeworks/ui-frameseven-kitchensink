@@ -16,7 +16,7 @@
     
     <fs-toolbar>
       <fs-column></fs-column>
-      <a class="button button-fill button-raised" click.trigger="validate()">Validate</a>
+      <fs-button raised fill click.trigger="validate()">Validate</fs-button>
     </fs-toolbar>
 
     <fs-page-content>
@@ -45,12 +45,13 @@
             <fs-input-label>URL</fs-input-label>
             <input type="url" placeholder="URL" value.bind="model.url & validate" />
           </fs-input>
-          <fs-phone value.bind="model.phone & validate">
+          <fs-input>
             <fs-item-media>
               <span class="icon fi-vaadin-phone"></span>
             </fs-item-media>
             <fs-input-label>Phone</fs-input-label>
-          </fs-phone>
+            <input type="tel" placeholder="Phone" phone value.bind="model.phone & validate" />
+          </fs-input>
           <fs-input type="list" placeholder="Select">
             <fs-item-media>
               <span class="icon fi-vaadin-paint-brush"></span>
