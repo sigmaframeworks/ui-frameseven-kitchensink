@@ -57,6 +57,7 @@
         appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="ios"]').disabled = true;
         appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="android"]').disabled = true;
         appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="' + dev + '"]').disabled = false;
+        if(!appFrame.contentWindow.Framework7) return;
         appFrame.contentWindow.Framework7.prototype.device.android = dev == 'android';
         appFrame.contentWindow.framework7.params.material = dev == 'android';
         appFrame.contentWindow.framework7.init();
