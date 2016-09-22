@@ -6,17 +6,17 @@
 <template>
   <fs-page data-page="list-grouped">
     <fs-navbar nav-title="Grouped List">
-      <span slot="left">
-        <fs-tool back></fs-tool>
-      </span>
-      <span slot="right">
-        <fs-tool menu></fs-tool>
-      </span>
+      <fs-nav-left>
+          <fs-tool back></fs-tool>
+        </fs-nav-left>
+      <fs-nav-right>
+          <fs-tool menu></fs-tool>
+        </fs-nav-right>
     </fs-navbar>
     
-    <fs-searchbar></fs-searchbar>
+    <fs-searchbar view-model.ref="searchBar"></fs-searchbar>
 
-    <fs-page-content>
+    <fs-page-content pull-to-refresh refresh.trigger="refresh($event)">
       <fs-content-title>Grouped List</fs-content-title>
       <fs-list searchable class="grouped">
         <fs-list-group repeat.for="key of countries | keys" label="${key}">

@@ -6,17 +6,17 @@
 <template>
   <fs-page data-page="list-media">
     <fs-navbar nav-title="Media Lists">
-      <span slot="left">
-        <fs-tool back></fs-tool>
-      </span>
-      <span slot="right">
-        <fs-tool menu></fs-tool>
-      </span>
+      <fs-nav-left>
+          <fs-tool back></fs-tool>
+        </fs-nav-left>
+      <fs-nav-right>
+          <fs-tool menu></fs-tool>
+        </fs-nav-right>
     </fs-navbar>
 
     <fs-page-content>
       <fs-content-title>Media List</fs-content-title>
-      <fs-list media-list>
+      <fs-list media>
         <fs-list-block>
           <fs-list-item repeat.for="idx of 3">
             <fs-item-media><img data-src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy"/></fs-item-media>
@@ -33,7 +33,7 @@
       </fs-list>
 
       <fs-content-title>Media List with Links</fs-content-title>
-      <fs-list media-list>
+      <fs-list media>
         <fs-list-block>
           <fs-list-link repeat.for="idx of 3">
             <fs-item-media><img data-src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy rounded"/></fs-item-media>
@@ -50,7 +50,7 @@
       </fs-list>
 
       <fs-content-title>Media List with Cards</fs-content-title>
-      <fs-list cards-list>
+      <fs-list cards>
         <fs-list-block>
           <fs-list-card repeat.for="idx of 3">
             <fs-card-header valign="bottom" class="color-white img-cover swiper-slide-placeholder lazy" data-background="http://lorempixel.com/300/80/food/${idx}" style="height:80px;">

@@ -4,7 +4,7 @@
 // @license     : MIT
 -->
 <template>
-  <fs-viewport menu-end splash-progress splash-progress-color="white" appready.trigger="ready()">
+  <fs-viewport menu-end swipe-menu splash-progress splash-progress-color="white" appready.trigger="ready()">
     <fs-list class="menu-list">
       <fs-list-group>
         <fs-list-link click.trigger="app.mainViewBack('home/view.html')" class="${app.activeView=='home'?'active':''}">
@@ -15,6 +15,9 @@
         </fs-list-link>
         <fs-list-link click.trigger="loadPage('list/view.html')" class="${app.activeView.startsWith('list')?'active':''}">
           <fs-item-title>Lists</fs-item-title>
+        </fs-list-link>
+        <fs-list-link click.trigger="loadPage('list/accordion.html')" class="${app.activeView.startsWith('accordion')?'active':''}">
+          <fs-item-title>Accordion</fs-item-title>
         </fs-list-link>
         <fs-list-link click.trigger="loadPage('inputs/view.html')" class="${app.activeView.startsWith('inputs')?'active':''}">
           <fs-item-title>Inputs</fs-item-title>

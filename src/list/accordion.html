@@ -1,0 +1,70 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
+<template>
+  <fs-page data-page="accordions">
+    <fs-navbar nav-title="Accordion Lists">
+      <fs-nav-left>
+          <fs-tool back></fs-tool>
+        </fs-nav-left>
+      <fs-nav-right>
+          <fs-tool menu></fs-tool>
+        </fs-nav-right>
+    </fs-navbar>
+
+    <fs-page-content>
+      <fs-content-title>Accordion List</fs-content-title>
+      <fs-list accordion>
+        <fs-list-block>
+          <fs-list-link repeat.for="idx of 3" accordion>
+            <fs-item-title>Item Title</fs-item-title>
+            <fs-accordion-content>
+              <small class="color-gray">Posted on ${'2016-09-18T' | date}</small>
+              <p>${lipsum}</p>
+            </fs-accordion-content>
+          </fs-list-link>
+        </fs-list-block>
+      </fs-list>
+      
+      <fs-content-title>Accordion Media List</fs-content-title>
+      <fs-list media accordion>
+        <fs-list-block>
+          <fs-list-link repeat.for="idx of 3" accordion>
+            <fs-item-media><img data-src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy"/></fs-item-media>
+            <fs-item-row>
+              <fs-item-title>Item</fs-item-title>
+              <fs-item-after>
+                <span class="badge">${idx+1}</span>
+              </fs-item-after>
+            </fs-item-row>
+            <fs-item-subtitle><small class="color-gray">Posted on ${'2016-09-18T' | date}</small></fs-item-subtitle>
+            <fs-accordion-content>
+              <p>${lipsum}</p>
+            </fs-accordion-content>
+          </fs-list-link>
+        </fs-list-block>
+      </fs-list>
+
+      
+        <fs-content-title>Accordion Card List</fs-content-title>
+        <fs-list cards accordion>
+          <fs-list-block>
+            <fs-list-card repeat.for="idx of 3" accordion-item>
+              <fs-card-header valign="bottom" class="color-white img-cover swiper-slide-placeholder lazy" data-background="http://lorempixel.com/300/80/food/${idx}" style="height:80px;">
+                <div style="background:rgba(0,0,0,.5);padding: .25em .5em" class="pad-h">Item Title</div>
+              </fs-card-header>
+              <fs-card-content accordion-content>
+                <small class="color-gray">Posted on ${'2016-09-18T' | date}</small>
+                <p>${lipsum}</p>
+              </fs-card-content>
+              <fs-card-footer class="row-end">
+                <fs-link accordion-toggle>Read More</fs-link>
+              </fs-card-footer>
+            </fs-list-card>
+          </fs-list-block>
+        </fs-list>
+    </fs-page-content>
+  </fs-page>
+</template>

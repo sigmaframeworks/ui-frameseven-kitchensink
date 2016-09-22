@@ -6,12 +6,12 @@
 <template>
   <fs-page data-page="list">
     <fs-navbar nav-title="Lists">
-      <span slot="left">
-        <fs-tool back></fs-tool>
-      </span>
-      <span slot="right">
-        <fs-tool menu></fs-tool>
-      </span>
+      <fs-nav-left>
+          <fs-tool back></fs-tool>
+        </fs-nav-left>
+      <fs-nav-right>
+          <fs-tool menu></fs-tool>
+        </fs-nav-right>
     </fs-navbar>
 
     <fs-page-content>
@@ -26,6 +26,9 @@
           </fs-list-link>
           <fs-list-link href="list/media.html">
             <fs-item-title>Media List</fs-item-title>
+          </fs-list-link>
+          <fs-list-link href="list/accordion.html">
+            <fs-item-title>Accordion</fs-item-title>
           </fs-list-link>
         </fs-list-block>
       </fs-list>

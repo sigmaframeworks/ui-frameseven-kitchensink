@@ -1,12 +1,12 @@
 <template>
-  <fs-page detached.trigger="detached()" data-page="settings">
+  <fs-page data-page="settings">
     <fs-navbar nav-title="Colors">
-      <span slot="left">
-        <fs-tool back></fs-tool>
-      </span>
-      <slot slot="right">
-        <fs-tool menu></fs-tool>
-      </slot>
+      <fs-nav-left>
+          <fs-tool back></fs-tool>
+        </fs-nav-left>
+      <fs-nav-right>
+          <fs-tool menu></fs-tool>
+        </fs-nav-right>
     </fs-navbar>
     <style>
       .color-block {

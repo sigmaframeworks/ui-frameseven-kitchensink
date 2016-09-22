@@ -6,12 +6,12 @@
 <template>
   <fs-page data-page="list-simple">
     <fs-navbar nav-title="Simple Lists">
-      <span slot="left">
-        <fs-tool back></fs-tool>
-      </span>
-      <span slot="right">
-        <fs-tool menu></fs-tool>
-      </span>
+      <fs-nav-left>
+          <fs-tool back></fs-tool>
+        </fs-nav-left>
+      <fs-nav-right>
+          <fs-tool menu></fs-tool>
+        </fs-nav-right>
     </fs-navbar>
 
     <fs-page-content>
@@ -42,6 +42,16 @@
             <fs-item-title>Country?</fs-item-title>
             <fs-item-after>US</fs-item-after>
           </fs-list-item>
+        </fs-list-block>
+        <fs-list-label>List Links</fs-list-label>
+        <fs-list-block>
+          <fs-list-link>
+            <fs-item-media>
+              <span class="icon color-theme fi-vaadin-link"></span>
+            </fs-item-media>
+            <fs-item-title>Country?</fs-item-title>
+            <fs-item-after>US</fs-item-after>
+          </fs-list-link>
         </fs-list-block>
       </fs-list>
       
