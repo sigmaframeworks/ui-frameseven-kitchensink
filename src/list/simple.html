@@ -7,54 +7,71 @@
   <fs-page data-page="list-simple">
     <fs-navbar nav-title="Simple Lists">
       <fs-nav-left>
-          <fs-tool back></fs-tool>
-        </fs-nav-left>
+        <fs-tool back></fs-tool>
+      </fs-nav-left>
       <fs-nav-right>
-          <fs-tool menu></fs-tool>
-        </fs-nav-right>
+        <fs-tool menu></fs-tool>
+      </fs-nav-right>
     </fs-navbar>
 
     <fs-page-content>
       <fs-content-title>Simple List</fs-content-title>
       <fs-list>
-        <fs-list-label>List block label</fs-list-label>
         <fs-list-block>
           <fs-list-item>
-            <fs-item-title>Question?</fs-item-title>
-            <fs-item-after>Age</fs-item-after>
+            <fs-item-content>
+              <fs-item-title>Title only</fs-item-title>
+            </fs-item-content>
           </fs-list-item>
           <fs-list-item>
-            <fs-item-title>Answer?</fs-item-title>
-            <fs-item-after><span class="badge">42</span></fs-item-after>
+            <fs-item-content>
+              <fs-item-title>Title with after text</fs-item-title>
+              <fs-item-after>After</fs-item-after>
+            </fs-item-content>
+          </fs-list-item>
+          <fs-list-item>
+            <fs-item-content>
+              <fs-item-title>Title with badge</fs-item-title>
+              <fs-item-after>
+                <span class="badge">42</span>
+              </fs-item-after>
+            </fs-item-content>
           </fs-list-item>
           <fs-list-divider></fs-list-divider>
           <fs-list-item>
-            <fs-item-media>
-              <span class="icon color-theme fi-vaadin-add-square"></span>
-            </fs-item-media>
-            <fs-item-title>Language?</fs-item-title>
-            <fs-item-after>English</fs-item-after>
+            <fs-item-content icon="fi-vaadin-add-square">
+              <fs-item-title>Item with media icon</fs-item-title>
+              <fs-item-after>After</fs-item-after>
+            </fs-item-content>
           </fs-list-item>
           <fs-list-item>
-            <fs-item-media>
-              <span class="icon color-theme fi-vaadin-add-square"></span>
-            </fs-item-media>
-            <fs-item-title>Country?</fs-item-title>
-            <fs-item-after>US</fs-item-after>
+            <fs-item-content>
+              <fs-item-media>
+                <img src="http://lorempixel.com/28/28/food/2" class="lazy rounded">
+              </fs-item-media>
+              <fs-item-title>Item with media image</fs-item-title>
+              <fs-item-after>After</fs-item-after>
+            </fs-item-content>
           </fs-list-item>
         </fs-list-block>
         <fs-list-label>List Links</fs-list-label>
         <fs-list-block>
-          <fs-list-link>
-            <fs-item-media>
-              <span class="icon color-theme fi-vaadin-link"></span>
-            </fs-item-media>
-            <fs-item-title>Country?</fs-item-title>
-            <fs-item-after>US</fs-item-after>
-          </fs-list-link>
+          <fs-list-item>
+            <fs-item-link icon="fi-vaadin-link">
+              <fs-item-title>Linked Item?</fs-item-title>
+            </fs-item-link>
+          </fs-list-item>
+          <fs-list-item>
+            <fs-item-link>
+              <fs-item-media>
+                <img src="http://lorempixel.com/28/28/food/3" class="lazy rounded">
+              </fs-item-media>
+              <fs-item-title>Linked Item?</fs-item-title>
+            </fs-item-link>
+          </fs-list-item>
         </fs-list-block>
       </fs-list>
-      
+
     </fs-page-content>
   </fs-page>
 </template>

@@ -7,11 +7,11 @@
   <fs-page data-page="card">
     <fs-navbar nav-title="Cards">
       <fs-nav-left>
-          <fs-tool back></fs-tool>
-        </fs-nav-left>
+        <fs-tool back></fs-tool>
+      </fs-nav-left>
       <fs-nav-right>
-          <fs-tool menu></fs-tool>
-        </fs-nav-right>
+        <fs-tool menu></fs-tool>
+      </fs-nav-right>
     </fs-navbar>
 
     <fs-page-content>
@@ -33,7 +33,7 @@
           <a href="#">Link</a>
         </fs-card-footer>
       </fs-card>
-      
+
       <fs-content-title>Card with Image Header</fs-content-title>
       <fs-card>
         <fs-card-header valign="bottom" class="color-white lazy" data-background="http://lorempixel.com/300/120/food" style="background:no-repeat center center;background-size:cover;height:120px;">
@@ -55,37 +55,49 @@
         <fs-list>
           <fs-list-group label="Item with After">
             <fs-list-item>
-              <fs-item-title>Question?</fs-item-title>
-              <fs-item-after>Age</fs-item-after>
+              <fs-item-content>
+                <fs-item-title>Question?</fs-item-title>
+                <fs-item-after>Age</fs-item-after>
+              </fs-item-content>
             </fs-list-item>
             <fs-list-item>
-              <fs-item-title>Answer?</fs-item-title>
-              <fs-item-after>42</fs-item-after>
+              <fs-item-content>
+                <fs-item-title>Answer?</fs-item-title>
+                <fs-item-after>42</fs-item-after>
+              </fs-item-content>
             </fs-list-item>
           </fs-list-group>
           <fs-list-group label="Item with Media">
             <fs-list-item>
-              <fs-item-media>
-                <span class="icon fi-vaadin-add-square"></span>
-              </fs-item-media>
-              <fs-item-title>Language?</fs-item-title>
-              <fs-item-after>English</fs-item-after>
+              <fs-item-content>
+                <fs-item-media>
+                  <span class="icon fi-vaadin-add-square"></span>
+                </fs-item-media>
+                <fs-item-title>Language?</fs-item-title>
+                <fs-item-after>English</fs-item-after>
+              </fs-item-content>
             </fs-list-item>
             <fs-list-item>
-              <fs-item-media>
-                <span class="icon fi-vaadin-add-square"></span>
-              </fs-item-media>
-              <fs-item-title>Country?</fs-item-title>
-              <fs-item-after>US</fs-item-after>
+              <fs-item-content>
+                <fs-item-media>
+                  <span class="icon fi-vaadin-add-square"></span>
+                </fs-item-media>
+                <fs-item-title>Country?</fs-item-title>
+                <fs-item-after>US</fs-item-after>
+              </fs-item-content>
             </fs-list-item>
           </fs-list-group>
           <fs-list-group label="Item with Links">
-            <fs-list-link>
-              <fs-item-title>Change Language</fs-item-title>
-            </fs-list-link>
-            <fs-list-link>
-              <fs-item-title>Change Country?</fs-item-title>
-            </fs-list-link>
+            <fs-list-item>
+              <fs-item-link>
+                <fs-item-title>Change Language</fs-item-title>
+              </fs-item-link>
+            </fs-list-item>
+            <fs-list-item>
+              <fs-item-link>
+                <fs-item-title>Change Country?</fs-item-title>
+              </fs-item-link>
+            </fs-list-item>
           </fs-list-group>
         </fs-list>
       </fs-card>

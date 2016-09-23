@@ -1,0 +1,94 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
+<template>
+  <fs-page data-page="list-simple">
+    <fs-navbar nav-title="Simple Lists">
+      <fs-nav-left>
+        <fs-tool back></fs-tool>
+      </fs-nav-left>
+      <fs-nav-right>
+        <fs-tool menu></fs-tool>
+      </fs-nav-right>
+    </fs-navbar>
+
+    <fs-page-content>
+      <fs-content-title>Simple List</fs-content-title>
+      <fs-list>
+        <fs-list-block>
+          <fs-list-swipeout>
+            <fs-item-content>
+              <fs-item-title>Swipeout left and right</fs-item-title>
+            </fs-item-content>
+            <fs-swipeout-left>
+              <fs-link class="bg-blue">
+                <span class="fi-vaadin-add-square"></span>
+              </fs-link>
+              <fs-link class="bg-orange">
+                <span class="fi-vaadin-chat"></span>
+              </fs-link>
+              <fs-link>
+                <span class="fi-vaadin-cogwheel"></span>
+              </fs-link>
+            </fs-swipeout-left>
+            <fs-swipeout-right>
+              <fs-link>More</fs-link>
+              <fs-link class="swipeout-delete" data-confirm="Are you sure want to delete this item?" data-confirm-title="Delete?" data-close-on-cancel="true">Delete</fs-link>
+            </fs-swipeout-right>
+          </fs-list-swipeout>
+          <fs-list-swipeout>
+            <fs-item-link>
+              <fs-item-media>
+                <span class="icon color-theme fi-vaadin-link"></span>
+              </fs-item-media>
+              <fs-item-title>Linked Item with swipeout?</fs-item-title>
+            </fs-item-link>
+            <fs-swipeout-right>
+              <fs-link>More</fs-link>
+              <fs-link class="swipeout-delete" data-confirm="Are you sure want to delete this item?" data-confirm-title="Delete?" data-close-on-cancel="true">Delete</fs-link>
+            </fs-swipeout-right>
+          </fs-list-swipeout>
+        </fs-list-block>
+      </fs-list>
+
+      <fs-content-title>Media List with Links</fs-content-title>
+      <fs-list media>
+        <fs-list-block>
+          <fs-list-swipeout repeat.for="idx of 3">
+            <fs-item-link>
+              <fs-item-media><img data-src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy rounded"/></fs-item-media>
+              <fs-item-row>
+                <fs-item-title>Item</fs-item-title>
+                <fs-item-after>
+                  <span class="badge">${idx+1}</span>
+                </fs-item-after>
+              </fs-item-row>
+              <fs-item-subtitle>
+                <small class="color-gray">Posted on ${'2016-09-18T' | date}</small>
+              </fs-item-subtitle>
+              <fs-item-text>${lipsum}</fs-item-text>
+            </fs-item-link>
+            <fs-swipeout-left>
+              <fs-link class="bg-blue">
+                <span class="fi-vaadin-add-square"></span>
+              </fs-link>
+              <fs-link class="bg-orange">
+                <span class="fi-vaadin-chat"></span>
+              </fs-link>
+              <fs-link>
+                <span class="fi-vaadin-cogwheel"></span>
+              </fs-link>
+            </fs-swipeout-left>
+            <fs-swipeout-right>
+              <fs-link>More</fs-link>
+              <fs-link class="swipeout-delete" data-confirm="Are you sure want to delete this item?" data-confirm-title="Delete?" data-close-on-cancel="true">Delete</fs-link>
+            </fs-swipeout-right>
+          </fs-list-swipeout>
+        </fs-list-block>
+      </fs-list>
+
+    </fs-page-content>
+  </fs-page>
+</template>

@@ -7,13 +7,13 @@
   <fs-page data-page="inputs">
     <fs-navbar nav-title="Inputs">
       <fs-nav-left>
-          <fs-tool back></fs-tool>
-        </fs-nav-left>
+        <fs-tool back></fs-tool>
+      </fs-nav-left>
       <fs-nav-right>
-          <fs-tool menu></fs-tool>
-        </fs-nav-right>
+        <fs-tool menu></fs-tool>
+      </fs-nav-right>
     </fs-navbar>
-    
+
     <fs-toolbar>
       <fs-column></fs-column>
       <fs-button raised fill click.trigger="validate()">Validate</fs-button>
@@ -29,28 +29,28 @@
               <span class="icon fi-vaadin-pencil"></span>
             </fs-item-media>
             <fs-input-label>Name</fs-input-label>
-            <input type="text" placeholder="Name" value.bind="model.name & validate" />
+            <input type="text" placeholder="Name" value.bind="model.name & validate"/>
           </fs-input>
           <fs-input>
             <fs-item-media>
               <span class="icon fi-vaadin-at"></span>
             </fs-item-media>
             <fs-input-label>Email</fs-input-label>
-            <input type="email" placeholder="Email" value.bind="model.email & validate" />
+            <input type="email" placeholder="Email" value.bind="model.email & validate"/>
           </fs-input>
           <fs-input>
             <fs-item-media>
               <span class="icon fi-vaadin-anchor"></span>
             </fs-item-media>
             <fs-input-label>URL</fs-input-label>
-            <input type="url" placeholder="URL" value.bind="model.url & validate" />
+            <input type="url" placeholder="URL" value.bind="model.url & validate"/>
           </fs-input>
           <fs-input>
             <fs-item-media>
               <span class="icon fi-vaadin-phone"></span>
             </fs-item-media>
             <fs-input-label>Phone</fs-input-label>
-            <input type="tel" placeholder="Phone" phone value.bind="model.phone & validate" />
+            <input type="tel" placeholder="Phone" phone value.bind="model.phone & validate"/>
           </fs-input>
           <fs-input>
             <fs-item-media>
@@ -82,6 +82,21 @@
             <fs-input-label>Date Time</fs-input-label>
             <input type="date" placeholder="Any date..."/>
           </fs-input>
+          <fs-list-label>Smart Select</fs-list-label>
+          <fs-list-item>
+            <fs-item-link smart-select data-open-in="popup" data-searchbar="true">
+              <select slot="select" value.bind="countryId">
+                <optgroup label="${key}" repeat.for="key of countries | keys">
+                  <option repeat.for="c of countries[key] | sort:'name'" value.bind="c.iso3" data-option-icon="ui-flag ${c.iso3}">${c.name}</option>
+                </optgroup>
+              </select>
+              <fs-item-media>
+                <span class="icon ui-flag ${countryId}"></span>
+              </fs-item-media>
+              <fs-item-title>Country?</fs-item-title>
+              <fs-item-after></fs-item-after>
+            </fs-item-link>
+          </fs-list-item>
         </fs-list-block>
       </fs-list>
 

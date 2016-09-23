@@ -7,11 +7,11 @@
   <fs-page data-page="list-media">
     <fs-navbar nav-title="Media Lists">
       <fs-nav-left>
-          <fs-tool back></fs-tool>
-        </fs-nav-left>
+        <fs-tool back></fs-tool>
+      </fs-nav-left>
       <fs-nav-right>
-          <fs-tool menu></fs-tool>
-        </fs-nav-right>
+        <fs-tool menu></fs-tool>
+      </fs-nav-right>
     </fs-navbar>
 
     <fs-page-content>
@@ -19,15 +19,19 @@
       <fs-list media>
         <fs-list-block>
           <fs-list-item repeat.for="idx of 3">
-            <fs-item-media><img data-src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy"/></fs-item-media>
-            <fs-item-row>
-              <fs-item-title>Item</fs-item-title>
-              <fs-item-after>
-                <span class="badge">${idx+1}</span>
-              </fs-item-after>
-            </fs-item-row>
-            <fs-item-subtitle><small class="color-gray">Posted on ${'2016-09-18T' | date}</small></fs-item-subtitle>
-            <fs-item-text>${lipsum}</fs-item-text>
+            <fs-item-content>
+              <fs-item-media><img data-src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy"/></fs-item-media>
+              <fs-item-row>
+                <fs-item-title>Item</fs-item-title>
+                <fs-item-after>
+                  <span class="badge">${idx+1}</span>
+                </fs-item-after>
+              </fs-item-row>
+              <fs-item-subtitle>
+                <small class="color-gray">Posted on ${'2016-09-18T' | date}</small>
+              </fs-item-subtitle>
+              <fs-item-text>${lipsum}</fs-item-text>
+            </fs-item-content>
           </fs-list-item>
         </fs-list-block>
       </fs-list>
@@ -35,17 +39,21 @@
       <fs-content-title>Media List with Links</fs-content-title>
       <fs-list media>
         <fs-list-block>
-          <fs-list-link repeat.for="idx of 3">
-            <fs-item-media><img data-src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy rounded"/></fs-item-media>
-            <fs-item-row>
-              <fs-item-title>Item</fs-item-title>
-              <fs-item-after>
-                <span class="badge">${idx+1}</span>
-              </fs-item-after>
-            </fs-item-row>
-            <fs-item-subtitle><small class="color-gray">Posted on ${'2016-09-18T' | date}</small></fs-item-subtitle>
-            <fs-item-text>${lipsum}</fs-item-text>
-          </fs-list-link>
+          <fs-list-item repeat.for="idx of 3">
+            <fs-item-link>
+              <fs-item-media><img data-src="http://lorempixel.com/80/80/food/${idx}" width="60" class="lazy rounded"/></fs-item-media>
+              <fs-item-row>
+                <fs-item-title>Item</fs-item-title>
+                <fs-item-after>
+                  <span class="badge">${idx+1}</span>
+                </fs-item-after>
+              </fs-item-row>
+              <fs-item-subtitle>
+                <small class="color-gray">Posted on ${'2016-09-18T' | date}</small>
+              </fs-item-subtitle>
+              <fs-item-text>${lipsum}</fs-item-text>
+            </fs-item-link>
+          </fs-list-item>
         </fs-list-block>
       </fs-list>
 

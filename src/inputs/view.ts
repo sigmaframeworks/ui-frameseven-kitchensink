@@ -10,6 +10,9 @@ import {_} from "sigma-ui-frameseven";
 @inject(NewInstance.of(ValidationController))
 export class InputsView {
   model: FormModel;
+  countries = _.chain(window.countries).sortBy('continent').groupBy('continent').value();
+  countryId;
+
   constructor(public controller: ValidationController) {
     this.model = new FormModel();
     this.controller.validateTrigger = validateTrigger.change;

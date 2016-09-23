@@ -5,6 +5,6 @@
 // @license     : MIT
 import {_} from "sigma-ui-frameseven";
 
-export class ListSimpleView {
+export class ListSwipeoutView {
   lipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non ante dui.';
 }

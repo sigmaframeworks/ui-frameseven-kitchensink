@@ -7,25 +7,29 @@
   <fs-page data-page="list-grouped">
     <fs-navbar nav-title="Grouped List">
       <fs-nav-left>
-          <fs-tool back></fs-tool>
-        </fs-nav-left>
+        <fs-tool back></fs-tool>
+      </fs-nav-left>
       <fs-nav-right>
-          <fs-tool menu></fs-tool>
-        </fs-nav-right>
+        <fs-tool menu></fs-tool>
+      </fs-nav-right>
     </fs-navbar>
-    
+
     <fs-searchbar view-model.ref="searchBar"></fs-searchbar>
 
     <fs-page-content pull-to-refresh refresh.trigger="refresh($event)">
       <fs-content-title>Grouped List</fs-content-title>
       <fs-list searchable class="grouped">
         <fs-list-group repeat.for="key of countries | keys" label="${key}">
-          <fs-list-item repeat.for="ct of countries[key]">
-            <fs-item-media>
-              <span class="icon ui-flag ${ct.iso3}"></span>
-            </fs-item-media>
-            <fs-item-title>${ct.name}</fs-item-title>
-            <fs-item-after><span class="badge">${ct.tld.replace('.','')}</span></fs-item-after>
+          <fs-list-item repeat.for="ct of countries[key] | sort:'name'">
+            <fs-item-content>
+              <fs-item-media>
+                <span class="icon ui-flag ${ct.iso3}"></span>
+              </fs-item-media>
+              <fs-item-title>${ct.name}</fs-item-title>
+              <fs-item-after>
+                <span class="badge">${ct.tld.replace('.','')}</span>
+              </fs-item-after>
+            </fs-item-content>
           </fs-list-item>
         </fs-list-group>
       </fs-list>
