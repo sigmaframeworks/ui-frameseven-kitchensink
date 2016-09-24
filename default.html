@@ -1,100 +1,94 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <!-- Required meta tags-->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <title>Aurelia</title>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Sigma UI Frameseven</title>
 
-  <link rel="stylesheet" href="css/app-common.css" />
-</head>
+    <link rel="stylesheet" href="css/app-common.css"/>
+  </head>
 
-<body>
-  <div class="row" style="justify-content: center">
-    <div class="col-auto col-info">
-      <h1>Framework7+Aurelia</h1>
-      <hr/>
-      <h4>Why Framework7+Aurelia?</h4>
-      <p>Until aurelia-interface is released and get to try it, framework7 is the best alternative after having tried Xamarin and Ionic</p>
-      <p>Although Xamarin was very nice platform to develop multi-device apps quickly, with some nice options of have shared classes and views. It wasnt very responsive when it came to android devices when having a long list view with complex list items.</p>
+  <body>
+    <div class="row" style="justify-content: center">
+      <div class="col-auto col-info">
+        <h1>Framework7+Aurelia</h1>
+        <hr/>
+        <h4>Why Framework7+Aurelia?</h4>
+        <p>Until aurelia-interface is released and get to try it, framework7 is the best alternative after having tried Xamarin and Ionic</p>
+        <p>Although Xamarin was very nice platform to develop multi-device apps quickly, with some nice options of have shared classes and views. It wasnt very responsive when it came to android devices when having a long list view with complex list items.</p>
 
-    </div>
+      </div>
 
-    <div class="col-auto">
-      <div class="row">
-        <div class="col-fill">
+      <div class="col-auto">
+        <div class="row">
+          <div class="col-fill">
 
-          <div class="demo-device">
-            <iframe id="appFrame" class="app-frame" src="index.html"></iframe>
+            <div class="demo-device">
+              <iframe id="appFrame" class="app-frame" src="index.html"></iframe>
+            </div>
+
           </div>
+          <div class="col-auto">
 
-        </div>
-        <div class="col-auto">
-
-          <div class="device-option"><input onchange="changeDevice('ios')" type="radio" name="dev" value="ios" id="ios" />
-            <label for="ios">
+            <div class="device-option"><input onchange="changeDevice('ios')" type="radio" name="dev" value="ios" id="ios"/>
+              <label for="ios">
                 <img
                   src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMDUgMzA1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDUgMzA1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnIGlkPSJYTUxJRF8yMjhfIj4KCTxwYXRoIGlkPSJYTUxJRF8yMjlfIiBkPSJNNDAuNzM4LDExMi4xMTljLTI1Ljc4NSw0NC43NDUtOS4zOTMsMTEyLjY0OCwxOS4xMjEsMTUzLjgyQzc0LjA5MiwyODYuNTIzLDg4LjUwMiwzMDUsMTA4LjIzOSwzMDUgICBjMC4zNzIsMCwwLjc0NS0wLjAwNywxLjEyNy0wLjAyMmM5LjI3My0wLjM3LDE1Ljk3NC0zLjIyNSwyMi40NTMtNS45ODRjNy4yNzQtMy4xLDE0Ljc5Ny02LjMwNSwyNi41OTctNi4zMDUgICBjMTEuMjI2LDAsMTguMzksMy4xMDEsMjUuMzE4LDYuMDk5YzYuODI4LDIuOTU0LDEzLjg2MSw2LjAxLDI0LjI1Myw1LjgxNWMyMi4yMzItMC40MTQsMzUuODgyLTIwLjM1Miw0Ny45MjUtMzcuOTQxICAgYzEyLjU2Ny0xOC4zNjUsMTguODcxLTM2LjE5NiwyMC45OTgtNDMuMDFsMC4wODYtMC4yNzFjMC40MDUtMS4yMTEtMC4xNjctMi41MzMtMS4zMjgtMy4wNjZjLTAuMDMyLTAuMDE1LTAuMTUtMC4wNjQtMC4xODMtMC4wNzggICBjLTMuOTE1LTEuNjAxLTM4LjI1Ny0xNi44MzYtMzguNjE4LTU4LjM2Yy0wLjMzNS0zMy43MzYsMjUuNzYzLTUxLjYwMSwzMC45OTctNTQuODM5bDAuMjQ0LTAuMTUyICAgYzAuNTY3LTAuMzY1LDAuOTYyLTAuOTQ0LDEuMDk2LTEuNjA2YzAuMTM0LTAuNjYxLTAuMDA2LTEuMzQ5LTAuMzg2LTEuOTA1Yy0xOC4wMTQtMjYuMzYyLTQ1LjYyNC0zMC4zMzUtNTYuNzQtMzAuODEzICAgYy0xLjYxMy0wLjE2MS0zLjI3OC0wLjI0Mi00Ljk1LTAuMjQyYy0xMy4wNTYsMC0yNS41NjMsNC45MzEtMzUuNjExLDguODkzYy02LjkzNiwyLjczNS0xMi45MjcsNS4wOTctMTcuMDU5LDUuMDk3ICAgYy00LjY0MywwLTEwLjY2OC0yLjM5MS0xNy42NDUtNS4xNTljLTkuMzMtMy43MDMtMTkuOTA1LTcuODk5LTMxLjEtNy44OTljLTAuMjY3LDAtMC41MywwLjAwMy0wLjc4OSwwLjAwOCAgIEM3OC44OTQsNzMuNjQzLDU0LjI5OCw4OC41MzUsNDAuNzM4LDExMi4xMTl6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8cGF0aCBpZD0iWE1MSURfMjMwXyIgZD0iTTIxMi4xMDEsMC4wMDJjLTE1Ljc2MywwLjY0Mi0zNC42NzIsMTAuMzQ1LTQ1Ljk3NCwyMy41ODNjLTkuNjA1LDExLjEyNy0xOC45ODgsMjkuNjc5LTE2LjUxNiw0OC4zNzkgICBjMC4xNTUsMS4xNywxLjEwNywyLjA3MywyLjI4NCwyLjE2NGMxLjA2NCwwLjA4MywyLjE1LDAuMTI1LDMuMjMyLDAuMTI2YzE1LjQxMywwLDMyLjA0LTguNTI3LDQzLjM5NS0yMi4yNTcgICBjMTEuOTUxLTE0LjQ5OCwxNy45OTQtMzMuMTA0LDE2LjE2Ni00OS43N0MyMTQuNTQ0LDAuOTIxLDIxMy4zOTUtMC4wNDksMjEyLjEwMSwwLjAwMnoiIGZpbGw9IiMwMDAwMDAiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"/>
               </label>
-          </div>
+            </div>
 
-          <div class="device-option"><input onchange="changeDevice('android')" type="radio" name="dev" value="android" id="android" />
-            <label for="android">
+            <div class="device-option"><input onchange="changeDevice('android')" type="radio" name="dev" value="android" id="android"/>
+              <label for="android">
                 <img
                   src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUwNS4xNDUgNTA1LjE0NSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTA1LjE0NSA1MDUuMTQ1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPGc+CgkJCTxwYXRoIGQ9Ik02OC41NDEsMTY0LjcxNWgtMS4yOTRjLTE2LjU4OCwwLTMwLjExMywxMy41NjgtMzAuMTEzLDMwLjExM3YxMzEuMTA3ICAgICBjMCwxNi42MSwxMy41MjUsMzAuMTM0LDMwLjExMywzMC4xMzRoMS4zMTZjMTYuNTg4LDAsMzAuMTEzLTEzLjU2OCwzMC4xMTMtMzAuMTM0VjE5NC44MjcgICAgIEM5OC42NTQsMTc4LjI4Myw4NS4xMDgsMTY0LjcxNSw2OC41NDEsMTY0LjcxNXoiIGZpbGw9IiNhYmMxNTEiLz4KCQkJPHBhdGggZD0iTTExMy4wODUsMzc2LjU0YzAsMTUuMjI5LDEyLjQ0NiwyNy42MzIsMjcuNjc1LDI3LjYzMmgyOS41NzR2NzAuODE3ICAgICBjMCwxNi42MzEsMTMuNTY4LDMwLjE1NiwzMC4xMTMsMzAuMTU2aDEuMjk0YzE2LjYxLDAsMzAuMTU2LTEzLjU0NiwzMC4xNTYtMzAuMTU2di03MC44MTdoNDEuMzN2NzAuODE3ICAgICBjMCwxNi42MzEsMTMuNjExLDMwLjE1NiwzMC4xNTYsMzAuMTU2aDEuMjczYzE2LjYwOSwwLDMwLjEzNC0xMy41NDYsMzAuMTM0LTMwLjE1NnYtNzAuODE3aDI5LjU5NSAgICAgYzE1LjIwNywwLDI3LjY1NC0xMi40MDMsMjcuNjU0LTI3LjYzMlYxNjkuNTI1SDExMy4wODVWMzc2LjU0eiIgZmlsbD0iI2FiYzE1MSIvPgoJCQk8cGF0aCBkPSJNMzIyLjA0MSw0My45ODNsMjMuNDkxLTM2LjI2YzEuNTEtMi4yODcsMC44NDEtNS40MTQtMS40NjctNi45MDMgICAgIGMtMi4yODYtMS41MS01LjQxNC0wLjg4NC02LjkwMywxLjQ2N2wtMjQuMzUzLDM3LjUxMmMtMTguMjctNy40ODUtMzguNjc2LTExLjY5MS02MC4yMjYtMTEuNjkxICAgICBjLTIxLjU3MSwwLTQxLjkzNCw0LjIwNi02MC4yNDcsMTEuNjkxbC0yNC4zMS0zNy41MTJjLTEuNDg4LTIuMzUxLTQuNjM4LTIuOTc3LTYuOTQ2LTEuNDY3ICAgICBjLTIuMzA4LDEuNDg4LTIuOTc3LDQuNjE2LTEuNDY3LDYuOTAzbDIzLjUxMiwzNi4yNmMtNDIuMzg3LDIwLjc3My03MC45NjgsNTkuOTI0LTcwLjk2OCwxMDQuODM0ICAgICBjMCwyLjc2MSwwLjE3Myw1LjQ3OSwwLjQxLDguMTc1aDI4MC4wNTNjMC4yMzctMi42OTYsMC4zODgtNS40MTQsMC4zODgtOC4xNzVDMzkzLjAwOSwxMDMuOTA3LDM2NC40MDYsNjQuNzU2LDMyMi4wNDEsNDMuOTgzeiAgICAgIE0xODcuNjU1LDEwOC45MTFjLTcuNDQyLDAtMTMuNDgyLTUuOTk3LTEzLjQ4Mi0xMy40NmMwLTcuNDYzLDYuMDQtMTMuNDM5LDEzLjQ4Mi0xMy40MzljNy40ODUsMCwxMy40ODIsNS45NzUsMTMuNDgyLDEzLjQzOSAgICAgUzE5NS4wOTcsMTA4LjkxMSwxODcuNjU1LDEwOC45MTF6IE0zMTcuNDksMTA4LjkxMWMtNy40NDIsMC0xMy40ODItNS45OTctMTMuNDgyLTEzLjQ2YzAtNy40NjMsNi4wNC0xMy40MzksMTMuNDgyLTEzLjQzOSAgICAgYzcuNDYzLDAsMTMuNDYsNS45NzUsMTMuNDYsMTMuNDM5QzMzMC45NSwxMDIuOTE0LDMyNC45NTMsMTA4LjkxMSwzMTcuNDksMTA4LjkxMXoiIGZpbGw9IiNhYmMxNTEiLz4KCQkJPHBhdGggZD0iTTQzNy44NzYsMTY0LjcxNWgtMS4yNTFjLTE2LjU4OCwwLTMwLjE1NiwxMy41NjgtMzAuMTU2LDMwLjExM3YxMzEuMTA3ICAgICBjMCwxNi42MSwxMy41OSwzMC4xMzQsMzAuMTU2LDMwLjEzNGgxLjI3M2MxNi42MDksMCwzMC4xMTMtMTMuNTY4LDMwLjExMy0zMC4xMzRWMTk0LjgyNyAgICAgQzQ2OC4wMTEsMTc4LjI4Myw0NTQuNDY0LDE2NC43MTUsNDM3Ljg3NiwxNjQuNzE1eiIgZmlsbD0iI2FiYzE1MSIvPgoJCTwvZz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"/>
               </label>
-          </div>
+            </div>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div style="position:absolute;top:0;bottom:0;left:0;right:0;background:white;z-index:1000000;" id="splash"></div>
+    <div style="position:absolute;top:0;bottom:0;left:0;right:0;background:white;z-index:1000000;" id="splash"></div>
 
-  <script>
-    var appFrame = document.getElementById('appFrame');
+    <script>
+      var appFrame = document.getElementById('appFrame');
 
-    function changeDevice(dev)
-    {
-      document['firstElementChild'].classList.remove('ios');
-      document['firstElementChild'].classList.remove('android');
-      document['firstElementChild'].classList.add(dev);
-      appFrame.contentDocument['firstElementChild'].classList.remove('ios');
-      appFrame.contentDocument['firstElementChild'].classList.remove('android');
-      appFrame.contentDocument['firstElementChild'].classList.add(dev);
-      appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="ios"]').disabled = true;
-      appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="android"]').disabled = true;
-      appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="' + dev + '"]').disabled = false;
-      appFrame.contentWindow.Framework7.prototype.device.android = dev == 'android';
-      appFrame.contentWindow.framework7.params.material = dev == 'android';
-      appFrame.contentWindow.framework7.init();
-      setTimeout(function()
-      {
-        appFrame.contentWindow.framework7.initPage(appFrame.contentWindow.mainView.activePage.container)
-      }, 1000);
-    }
-    appFrame.onload = function()
-    {
-      var ios = navigator.vendor.toLowerCase().indexOf('google') == -1;
-      document.getElementById("ios").checked = ios;
-      document.getElementById("android").checked = !ios;
-      setTimeout(function()
-      {
-        try
-        {
-          changeDevice(ios ?
-            'ios' :
-            'android');
-        }
-        catch (e)
-        {}
-        document.getElementById('splash').remove();
-      }, 1000);
-    }
-  </script>
-</body>
+      function changeDevice(dev) {
+        document['firstElementChild'].classList.remove('ios');
+        document['firstElementChild'].classList.remove('android');
+        document['firstElementChild'].classList.add(dev);
+        appFrame.contentDocument['firstElementChild'].classList.remove('ios');
+        appFrame.contentDocument['firstElementChild'].classList.remove('android');
+        appFrame.contentDocument['firstElementChild'].classList.add(dev);
+        appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="ios"]').disabled = true;
+        appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="android"]').disabled = true;
+        appFrame.contentDocument.querySelector('link[rel*="stylesheet"][title="' + dev + '"]').disabled = false;
+        appFrame.contentWindow.Framework7.prototype.device.android = dev == 'android';
+        appFrame.contentWindow.framework7.params.material = dev == 'android';
+        // appFrame.contentWindow.framework7.init();
+        setTimeout(function () {
+          appFrame.contentWindow.framework7.initPage(appFrame.contentWindow.mainView.activePage.container)
+        }, 1000);
+      }
+      appFrame.onload = function () {
+        var ios = navigator.vendor.toLowerCase().indexOf('google') == -1;
+        document.getElementById("ios").checked = ios;
+        document.getElementById("android").checked = !ios;
+        setTimeout(function () {
+          try
+          {
+            changeDevice(ios
+              ? 'ios'
+              : 'android');
+          } catch (e) {}
+          document.getElementById('splash').remove();
+        }, 1000);
+      }
+    </script>
+  </body>
 
 </html>

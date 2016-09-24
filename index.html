@@ -8,6 +8,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready; img-src 'self' data: *; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; *; style-src  &apos;self&apos; &apos;unsafe-inline&apos; *">
   <title>Aurelia+Framework7</title>
 
   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
@@ -33,6 +34,7 @@
   <link rel="stylesheet" href="fonts/vaadin/flaticon.css" />
   <link rel="stylesheet" disabled="disabled" href="css/app-ios.css" title="ios" />
   <link rel="stylesheet" disabled="disabled" href="css/app-material.css" title="android" />
+  <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
   <style>
     .fs-splash {
       background-image: url('images/splash.png');
