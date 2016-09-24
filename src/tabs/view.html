@@ -1,0 +1,172 @@
+<!--
+// @author      : Adarsh Pastakia
+// @copyright   : 2016 Sigma Frameworks
+// @license     : MIT
+-->
+<template>
+  <fs-page data-page="tabs">
+    <fs-navbar nav-title="Tabs">
+      <fs-nav-left>
+        <fs-tool back></fs-tool>
+      </fs-nav-left>
+      <fs-nav-right>
+        <fs-tool menu></fs-tool>
+      </fs-nav-right>
+    </fs-navbar>
+
+    <fs-tabbar with-labels>
+      <fs-tab-link href="#tab1" label="Home" icon="fi-vaadin-house" class="active"></fs-tab-link>
+      <fs-tab-link href="#tab2" label="Info" icon="fi-vaadin-info-1" badge-value="2" badge-class="bg-blue"></fs-tab-link>
+      <fs-tab-link href="#tab3" label="Settings" icon="fi-vaadin-cogwheel-1"></fs-tab-link>
+    </fs-tabbar>
+
+    <fs-tab-content>
+      <fs-tab id="tab1" class="active">
+        <fs-content-title>Tab 1</fs-content-title>
+        <fs-content-block>
+          <div innerhtml.bind="lipsum | markdown"></div>
+        </fs-content-block>
+      </fs-tab>
+      <fs-tab id="tab2">
+        <fs-content-title>Input List</fs-content-title>
+        <fs-list validation-renderer="fs-validator">
+          <fs-list-divider>Simple inputs</fs-list-divider>
+          <fs-list-block>
+            <fs-input>
+              <fs-item-media>
+                <span class="icon fi-vaadin-pencil"></span>
+              </fs-item-media>
+              <fs-input-label>Name</fs-input-label>
+              <input type="text" placeholder="Name"/>
+            </fs-input>
+            <fs-input>
+              <fs-item-media>
+                <span class="icon fi-vaadin-at"></span>
+              </fs-item-media>
+              <fs-input-label>Email</fs-input-label>
+              <input type="email" placeholder="Email"/>
+            </fs-input>
+            <fs-input>
+              <fs-item-media>
+                <span class="icon fi-vaadin-anchor"></span>
+              </fs-item-media>
+              <fs-input-label>URL</fs-input-label>
+              <input type="url" placeholder="URL"/>
+            </fs-input>
+            <fs-input>
+              <fs-item-media>
+                <span class="icon fi-vaadin-phone"></span>
+              </fs-item-media>
+              <fs-input-label>Phone</fs-input-label>
+              <input type="tel" placeholder="Phone"/>
+            </fs-input>
+            <fs-input>
+              <fs-item-media>
+                <span class="icon fi-vaadin-check-square-1"></span>
+              </fs-item-media>
+              <fs-input-label>Check</fs-input-label>
+              <fs-switch checked="true"></fs-switch>
+            </fs-input>
+            <fs-list-divider>Picker inputs</fs-list-divider>
+            <fs-input type="list" placeholder="Select">
+              <fs-item-media>
+                <span class="icon fi-vaadin-paint-brush"></span>
+              </fs-item-media>
+              <fs-input-label>Color</fs-input-label>
+              <select>
+                <option value="">--Select One--</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="orange">Orange</option>
+                <option value="purple">Purple</option>
+              </select>
+            </fs-input>
+            <fs-input>
+              <fs-item-media>
+                <span class="icon fi-vaadin-calendar-and-clock"></span>
+              </fs-item-media>
+              <fs-input-label>Date Time</fs-input-label>
+              <input type="date" placeholder="Any date..."/>
+            </fs-input>
+            <fs-list-divider>Smart Select</fs-list-divider>
+            <fs-list-item>
+              <fs-item-link smart-select data-open-in="popup" data-searchbar="true">
+                <select slot="select" value.bind="countryId">
+                  <optgroup label="${key}" repeat.for="key of countries | keys">
+                    <option repeat.for="c of countries[key] | sort:'name'" value.bind="c.iso3" data-option-icon="ui-flag ${c.iso3}">${c.name}</option>
+                  </optgroup>
+                </select>
+                <fs-item-media>
+                  <span class="icon ui-flag ${countryId}"></span>
+                </fs-item-media>
+                <fs-item-title>Country?</fs-item-title>
+                <fs-item-after></fs-item-after>
+              </fs-item-link>
+            </fs-list-item>
+          </fs-list-block>
+        </fs-list>
+      </fs-tab>
+      <fs-tab id="tab3">
+        <fs-content-title>Settings List</fs-content-title>
+        <fs-list>
+          <fs-list-block>
+            <fs-list-item>
+              <fs-item-content>
+                <fs-item-title>Title only</fs-item-title>
+              </fs-item-content>
+            </fs-list-item>
+            <fs-list-item>
+              <fs-item-content>
+                <fs-item-title>Title with after text</fs-item-title>
+                <fs-item-after>After</fs-item-after>
+              </fs-item-content>
+            </fs-list-item>
+            <fs-list-item>
+              <fs-item-content>
+                <fs-item-title>Title with badge</fs-item-title>
+                <fs-item-after>
+                  <span class="badge">42</span>
+                </fs-item-after>
+              </fs-item-content>
+            </fs-list-item>
+            <fs-list-divider></fs-list-divider>
+            <fs-list-item>
+              <fs-item-content icon="fi-vaadin-add-square">
+                <fs-item-title>Item with media icon</fs-item-title>
+                <fs-item-after>After</fs-item-after>
+              </fs-item-content>
+            </fs-list-item>
+            <fs-list-item>
+              <fs-item-content>
+                <fs-item-media>
+                  <img src="http://lorempixel.com/28/28/food/2" class="lazy rounded">
+                </fs-item-media>
+                <fs-item-title>Item with media image</fs-item-title>
+                <fs-item-after>After</fs-item-after>
+              </fs-item-content>
+            </fs-list-item>
+          </fs-list-block>
+          <fs-list-divider>List Links</fs-list-divider>
+          <fs-list-block>
+            <fs-list-item>
+              <fs-item-link icon="fi-vaadin-link">
+                <fs-item-title>Linked Item?</fs-item-title>
+              </fs-item-link>
+            </fs-list-item>
+            <fs-list-item>
+              <fs-item-link>
+                <fs-item-media>
+                  <img src="http://lorempixel.com/28/28/food/3" class="lazy rounded">
+                </fs-item-media>
+                <fs-item-title>Linked Item?</fs-item-title>
+              </fs-item-link>
+            </fs-list-item>
+          </fs-list-block>
+        </fs-list>
+      </fs-tab>
+    </fs-tab-content>
+
+  </fs-page>
+</template>
