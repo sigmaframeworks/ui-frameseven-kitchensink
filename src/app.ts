@@ -10,6 +10,7 @@ export class App {
   constructor(public app: FSApplication) {
     Constants.layout = "layout-light";
     Constants.theme = "theme-default";
+    Constants.navbar = "navbar-default";
   }
 
   ready() {

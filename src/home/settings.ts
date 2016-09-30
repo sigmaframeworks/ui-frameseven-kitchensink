@@ -33,6 +33,8 @@ export class HomePopup {
 
   changeTheme(v) {
     document.body.classList.remove(Constants.theme);
+    document.body.classList.remove(Constants.navbar);
     document.body.classList.add((Constants.theme = 'theme-' + v));
+    document.body.classList.add((Constants.navbar = 'navbar-' + v));
   }
 }
