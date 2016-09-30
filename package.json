@@ -2,12 +2,14 @@
   "name": "ui-frameseven-kitchensink",
   "description": "An Aurelia client application.",
   "version": "0.1.0",
-  "repository": {
+  "repository":
+  {
     "type": "???",
     "url": "???"
   },
   "license": "MIT",
-  "dependencies": {
+  "dependencies":
+  {
     "aurelia-animator-css": "^1.0.0-rc.1.0.0",
     "aurelia-bootstrapper": "^1.0.0-rc.1.0.0",
     "aurelia-fetch-client": "^1.0.0-rc.1.0.0",
@@ -17,9 +19,11 @@
     "sigma-libs": "0.0.3",
     "sigma-ui-frameseven": "file:///Users/adarshpastakia/Workspace/SigmaFrameworks/sigma-ui-frameseven"
   },
-  "peerDependencies": {},
-  "devDependencies": {
-    "aurelia-cli": "^0.17.0",
+  "peerDependencies":
+  {},
+  "devDependencies":
+  {
+    "aurelia-cli": "^0.19.0",
     "aurelia-testing": "^1.0.0-beta.1.0.0",
     "aurelia-tools": "^0.2.2",
     "browser-sync": "^2.13.0",

@@ -36,7 +36,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('dist', function() {
-  return gulp.src(['index.html', 'blank.html', 'default.html',
+  return gulp.src(['index.html', 'blank.html', 'default.html', 'manifest.json',
       'node_modules/sigma-ui-frameseven/dist/**/*.js',
       'node_modules/sigma-ui-frameseven/dist/**/*.html',
       './fonts/**/*', './css/**/*', './favicons/**/*', './images/**/*', './scripts/**/*'
