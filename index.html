@@ -1,71 +1,72 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <!-- Required meta tags-->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready; img-src 'self' data: *; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; *; style-src  &apos;self&apos; &apos;unsafe-inline&apos; *">
-  <title>Aurelia+Framework7</title>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready; img-src 'self' data: *; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; *; style-src  &apos;self&apos; &apos;unsafe-inline&apos; *">
+    <title>Aurelia+Framework7</title>
 
-  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-  <link rel="apple-touch-startup-image" href="images/splash.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="manifest" href="favicons/manifest.json">
-  <meta name="msapplication-TileColor" content="#ef5365">
-  <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ef5365">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="apple-touch-startup-image" href="images/splash.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ef5365">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ef5365">
 
-  <link rel="stylesheet" href="css/ui-flags.css" />
-  <link rel="stylesheet" href="fonts/vaadin/flaticon.css" />
-  <link rel="stylesheet" disabled="disabled" href="css/app-ios.css" title="ios" />
-  <link rel="stylesheet" disabled="disabled" href="css/app-material.css" title="android" />
-  <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-  <style>
-    .fs-splash {
-      background-image: url('images/splash.png');
-    }
-    
-    .swiper-slide-placeholder {
-      background-image: url('images/placeholder.png');
-    }
-    
-    .photo-browser-slide {
-      background-image: url('images/placeholder.png');
-    }
-  </style>
-</head>
+    <link rel="stylesheet" href="css/ui-flags.css"/>
+    <link rel="stylesheet" href="fonts/vaadin/flaticon.css"/>
+    <link rel="stylesheet" disabled="disabled" href="css/app-ios.css" title="ios"/>
+    <link rel="stylesheet" disabled="disabled" href="css/app-material.css" title="android"/>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <style>
+      .fs-splash {
+        background-image: url('images/splash.png');
+      }
 
-<body class="navbar-dark layout-light theme-default">
-  <div class="fs-splash">
-    <span class="preloader preloader-white">
+      .swiper-slide-placeholder {
+        background-image: url('images/placeholder.png');
+      }
+
+      .photo-browser-slide {
+        background-image: url('images/placeholder.png');
+      }
+
+    </style>
+  </head>
+
+  <body class="navbar-dark layout-light theme-default">
+    <div class="fs-splash">
+      <span class="preloader preloader-white">
         <span class="preloader-inner">
           <span class="preloader-inner-gap"></span>
-    <span class="preloader-inner-left">
+          <span class="preloader-inner-left">
             <span class="preloader-inner-half-circle"></span>
-    </span>
-    <span class="preloader-inner-right">
+          </span>
+          <span class="preloader-inner-right">
             <span class="preloader-inner-half-circle"></span>
-    </span>
-    </span>
-    </span>
-  </div>
-  <div aurelia-app="main" class="app-container"></div>
-  <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
-</body>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div aurelia-app="main" class="app-container"></div>
+    <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
+  </body>
 
 </html>
